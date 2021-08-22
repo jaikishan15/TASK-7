@@ -1,1 +1,120 @@
+<script>
+    function jai() {
+    
+    var i = document.getElementById("in1").value
+    
+    var xhr = new XMLHttpRequest();
+    
+    
+    xhr.open("GET","http://192.168.22.14/cgi-bin/task7.py?x="+i, true);
+    xhr.send();
+    
+    xhr.onload = function() {
+        var output = xhr.responseText;
+        document.getElementById("d1").innerHTML = output;
+        }
+    }
+    
+    </script>
+    
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker command</title>
+</head>
+
+<style>
+body {
+            text-align: center;
+            background-color: aqua;
+           
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+            .j5 {
+            text-align: center;
+            transform: scale(1,1);
+            
+            }
+            #in1 {
+            font-size: 20px;
+            background-color:white
+        }
+        .j4 {
+            font-size: 18px;
+            color: white;
+            top: 0px;
+
+        }
+        .j3 {
+            
+            font-size: 20px;
+            text-align: left;
+        }
+
+.button{
+    padding: 10px;
+    margin:30px;
+    border: 0;
+    background: rgb(218, 3, 3);
+    color: white;
+    font-size: 10px;
+    transition: 0.3s;
+    outline: 0;
+    border-radius: 30%;
+    cursor: pointer;
+    position: absolute;
+    top: 245px;
+    left: 400px;
+    box-shadow: 0 9px #999;
+    
+    
+}
+
+.button {
+            background-color: red;
+            font-size: 10px;
+            text-align: center;
+            top: 30px;
+        }
+
+       
+        .button:active {
+            background-color: black;
+ box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+      
+
+</style>
+<body>
+    
+
+
+
+
+<div class="j4">
+    <h2><i> WELCOME TO THIS WEBSITE</i></h2>
+    
+    
+</div>
+<div class="j3"><i><b> [root @localhost~]# <input id="in1" /></b></i></div>
+    <button class="button" onclick="jai()">
+        <b>GO</b>
+    </button>
+<pre>
+<div id="d1">Press <b>GO</b> to see your output here.<div />
+<div class="j5">
+            </div>
+<pre/> 
+</body>
+
+    
+
+</html>
